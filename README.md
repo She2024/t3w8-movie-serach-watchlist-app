@@ -19,3 +19,9 @@ Phase 2 (Thursday):
 - Watchlist feature (save movies to local storage or context).
 - Watchlist page
 - Implement "Delete from Watchlist" functionality.
+
+Here is your key: ad2d7783
+
+Please append it to all of your API requests,
+
+OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=ad2d7783

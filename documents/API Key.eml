@@ -1,0 +1,94 @@
+Delivered-To: bullybluedog@gmail.com
+Received: by 2002:a59:9186:0:b0:4ab:81b9:6384 with SMTP id s6csp145217vqg;
+        Wed, 4 Dec 2024 03:34:35 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHGFHEb8vIgkaTscrfhUpGqFO+mF9bWZGem4WVO1g+jJ7xKcREylaKAS8bezYh8hsd48V6i
+X-Received: by 2002:a17:902:ced1:b0:215:4450:54fb with SMTP id d9443c01a7336-215bd27be05mr71025145ad.55.1733312074739;
+        Wed, 04 Dec 2024 03:34:34 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733312074; cv=none;
+        d=google.com; s=arc-20240605;
+        b=CoZA9lPYidsI0KD1ly0HTHrssmLwk6seWd4BL6a0sIc19CzQiQRVghoj3dPD5TmQ2s
+         q5S1JR30fAJgS+x/iQ5yr36KVulVXDVlbPxyklapKfnfjikF27lo+jA41oijzUy1EASY
+         R0+ADr5jF9bEREll4hmIRaW0/2kbv2Rih9v8O7wAB6ohySYSPQCfqB9ML3ofHJJ28Kfi
+         fRoUaym09jZBjzzbC17kdjxp+fIpClkEfmeQC47edFlW2tbTwVA/LIj1T/cfplyDxPPt
+         cVjpt6L+32zElJip2ubF3h8OGeR6nRAbVmlnicim5/74U1zOpZvBrzyfd8vk8wohcZTK
+         wxQw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:message-id:content-transfer-encoding:subject:date:from
+         :mime-version:dkim-signature:dkim-signature;
+        bh=gIYRPcq1V/evbmDejCkPoDygTJOize7GBExXzrkpsc0=;
+        fh=l1uy/9iA3KwRX4VDGj//UKHuBMWd3IugX6jRPPTjlnQ=;
+        b=UBL6XAxkAv2563n8UjDVI79RY4zGtgzNSFX6kUJgL5oKzRX283C/yqQ+a5jenSavEq
+         0nhvjIQOU8/Tdpc44WOE39VtCaV1HfZzzegMAaFdhOH0QYt/DpfCbTEvFlz8XbnL2+7g
+         +sP7DgTNifuzet6U34KVprHKrUUirwLfkiNUbxscfMw9eOBbsj/IRynTCZs3RmbKv6+j
+         C9/bAoBdNk2k9/9hqEyjisXpWMTnx2BYipZM0sQskZnu0ro37uVDBADJEYvKIUdG1LO/
+         y2YcZXCcXhWRyp8OClEcBIvYhKV+QczIWsrJxNIjoU9nHqB1Y0KH1xPbn8q+tMDsOfka
+         se1g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@omdbapi.com header.s=s1 header.b=h2Rw99bz;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=KIsyo1eG;
+       spf=pass (google.com: domain of bounces+25030585-7020-bullybluedog=gmail.com@em9189.omdbapi.com designates 159.183.224.104 as permitted sender) smtp.mailfrom="bounces+25030585-7020-bullybluedog=gmail.com@em9189.omdbapi.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=omdbapi.com
+Return-Path: <bounces+25030585-7020-bullybluedog=gmail.com@em9189.omdbapi.com>
+Received: from s.wfbtzhsv.outbound-mail.sendgrid.net (s.wfbtzhsv.outbound-mail.sendgrid.net. [159.183.224.104])
+        by mx.google.com with ESMTPS id d9443c01a7336-215413a3603si135749675ad.59.2024.12.04.03.34.33
+        for <bullybluedog@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 04 Dec 2024 03:34:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+25030585-7020-bullybluedog=gmail.com@em9189.omdbapi.com designates 159.183.224.104 as permitted sender) client-ip=159.183.224.104;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@omdbapi.com header.s=s1 header.b=h2Rw99bz;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=KIsyo1eG;
+       spf=pass (google.com: domain of bounces+25030585-7020-bullybluedog=gmail.com@em9189.omdbapi.com designates 159.183.224.104 as permitted sender) smtp.mailfrom="bounces+25030585-7020-bullybluedog=gmail.com@em9189.omdbapi.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=omdbapi.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=omdbapi.com;
+	h=mime-version:from:subject:content-type:content-transfer-encoding:
+	x-feedback-id:to:cc:content-type:from:subject:to;
+	s=s1; bh=gIYRPcq1V/evbmDejCkPoDygTJOize7GBExXzrkpsc0=;
+	b=h2Rw99bz1j/CiBU3zIVEnqwT7UqiUYInsRm4gV1Yj5fxAN+6uaX6qLcySnKZAgVL7yUA
+	bl5xtlcqP6HWagJqZyCe7TokjflIkF78XCc0A5QhhIpQB35o7FSLgPpyZWlb2FdGALUkJy
+	jdGURIxbjuRNifPpydPXxLaqBLeJGG5EupRP9U/x+Znu1OOxFHoHQ27oEipczvkn2XmA45
+	DzTu7DsqKqJdOo/SULy+GNJTf4nGiBVgR/Ocb+z2LQrW3gGSMi0dYY4qp6fDiA/91k5OAL
+	vkhuMwPLweIZw9Uk15HIAzofySAHd8Mae9yTax48tUkl2ZpiXX8QD269v/9tseGQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=mime-version:from:subject:content-type:content-transfer-encoding:
+	x-feedback-id:to:cc:content-type:from:subject:to;
+	s=smtpapi; bh=gIYRPcq1V/evbmDejCkPoDygTJOize7GBExXzrkpsc0=;
+	b=KIsyo1eGI/fcA0fG9g0VjRuIz0H5hMADR/jJejj1ot80+S1T/dCzR9c8WTl0QSXVmCJ9
+	AESOWlzkveRsh9lu5V9noKDSndBgO3/r6ZLEDh/Q0oKrDtu1U95U9F2ujGHQFhdxzyL3k7
+	28HBD608QFVH+SHZmWFkcQ5L7OUgaFlhI=
+Received: by recvd-84b546689d-6cb64 with SMTP id recvd-84b546689d-6cb64-1-67503E46-E
+	2024-12-04 11:34:30.725428478 +0000 UTC m=+1692659.293227841
+Received: from omdb2 (unknown)
+	by geopod-ismtpd-11 (SG) with ESMTP
+	id rMaE7j7bTEO2IGKepNgw0Q
+	for <bullybluedog@gmail.com>;
+	Wed, 04 Dec 2024 11:34:30.626 +0000 (UTC)
+MIME-Version: 1.0
+From: The OMDb API <donotreply@omdbapi.com>
+Date: Wed, 04 Dec 2024 11:34:31 +0000 (UTC)
+Subject: API Key
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <rMaE7j7bTEO2IGKepNgw0Q@geopod-ismtpd-11>
+X-Feedback-ID: 25030585:SG
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EjHAkfVaDkSXskJj1BbNR4OlWVdodXodnl5XReY13+8rYpai3ZjokU3NbU?=
+ =?us-ascii?Q?bx7gj9b7mIxGtnUuMp6F6sWSsR0PVoMSxivwBPz?=
+ =?us-ascii?Q?jb44KL917j4JshHb4uakJl5tIS7tVTA=2Fh8vN2Sn?=
+ =?us-ascii?Q?v0K2xpPScc9x7CBtlxtet8SSVWHqrtcAy8bdRly?=
+ =?us-ascii?Q?23vw0rHf=2Fofv7vgz2UPsrt5=2FrnMUvPvJU74tMPj?=
+ =?us-ascii?Q?vjPQmSthB1LlMWIntM17vYpxYSiouSpybh7Bz4T?= =?us-ascii?Q?0z4T?=
+To: bullybluedog@gmail.com
+X-Entity-ID: u001.Q8Yi7Ng3Z0uMmoFIBiEbhw==
+
+Here is your key: ad2d7783
+
+Please append it to all of your API requests,
+
+OMDb API: http://www.omdbapi.com/?i=3Dtt3896198&apikey=3Dad2d7783
+
+Click the following URL to activate your key: http://www.omdbapi.com/apikey=
+.aspx?VERIFYKEY=3D25805012-965e-4295-9621-65303161aff3
+If you did not make this request, please disregard this email.
+
