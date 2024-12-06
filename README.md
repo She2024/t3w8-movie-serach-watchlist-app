@@ -25,3 +25,6 @@ Here is your key: ad2d7783
 Please append it to all of your API requests,
 
 OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=ad2d7783
+
+Phase 3
+- Add Nav Bar
