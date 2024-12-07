@@ -26,7 +26,9 @@ Please append it to all of your API requests,
 
 OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=ad2d7783
 
-Phase 3
-- Add a proper Navbar
+hase 3 (Saturday):
+- Having a proper Navbar
 - Added the Details Page for each movie
-- Disabel "Add to Watchlist" after adding it.
+- Added "Go Back" navigation
+- Disable "Add to Watchlist" after adding it
+- Work on Notification Context, Component

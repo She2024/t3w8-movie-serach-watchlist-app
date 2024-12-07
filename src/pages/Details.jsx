@@ -10,7 +10,7 @@ export default function Details(){
     useEffect(() => {
         const fetchMovieDetails = async () => {
             try {
-                const response = await fetch(`http://www.omdbapi.com/?apikey=d58efa1d&i=${id}&plot=full`);
+                const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=ad2d7783&i=${id}&plot=full`);
                 const data = await response.json();
 
                 if (data.Response === "True") {

@@ -15,7 +15,7 @@ export default function Home() {
         if (query) {
             const response = await axios.get(`http://www.omdbapi.com/`, {
                 params: {
-                    apikey: 'd58efa1d',
+                    apikey: 'ad2d7783',
                     s: query
                 }
             });
